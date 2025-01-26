@@ -1,0 +1,161 @@
+.home {
+  padding: 2rem;
+  background-color: #ececec;
+}
+
+/* Categorias */
+.categories {
+  margin-top: 3rem;
+}
+
+.categories h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  animation: fadeInText 1.5s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+  color: #228394;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.category-card {
+  text-decoration: none;
+  background: linear-gradient(135deg, #00b4d8, #5c9da8);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção "Sobre Nós" */
+.about-us {
+  margin-top: 4rem;
+  padding: 3rem;
+  background: linear-gradient(145deg, #e0f7fa, #80deea);
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out;
+  position: relative;
+}
+
+.about-us h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #00796b;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  animation: fadeInText 1.5s ease-in-out 0.3s forwards;
+}
+
+.about-us p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 2rem;
+  font-family: 'Roboto', sans-serif;
+  animation: fadeInText 1.5s ease-in-out 0.6s forwards;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-us::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 5px;
+  background: #00796b;
+  border-radius: 20px;
+  animation: slideIn 5s ease-out infinite;
+}
+
+/* Animação para fade-in do texto */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animação de slide para as linhas decorativas */
+@keyframes slideIn {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 500px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* Animação para o fundo da seção "Sobre Nós" */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animação de fade-in para texto */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  
+  .categories h2 {
+    font-size: 2rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .about-us h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-us p {
+    font-size: 1rem;
+  }
+}
